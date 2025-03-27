@@ -13,6 +13,7 @@ export default function Chat() {
   useEffect(() => {
     document.title = "Chat";
 
+    document.body.classList.add("bg-black");
     //variable to handle new socket
     const newSocket = io("http://localhost:3010", {
       transports: ["websocket"],

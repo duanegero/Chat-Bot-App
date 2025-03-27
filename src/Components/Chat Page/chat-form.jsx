@@ -52,7 +52,9 @@ export default function ChatForm({ socket, messages, setMessages }) {
 
   return (
     <div className="flex flex-col justify-center items-center">
-      <h1 className="font-bold text-5xl tracking-widest mt-7">Chat</h1>
+      <h1 className="font-bold text-5xl tracking-widest mt-3 font-boldonse border-2 p-6 rounded-2xl bg-[#007aff] text-white">
+        Louy
+      </h1>
       <div className="w-[375px] h-[667px] overflow-y-scroll border-4 rounded-2xl p-5 mt-14 font-inter text-xl bg-black tracking-widest mb-10 text-white flex flex-col relative">
         <div
           ref={chatWindowRef}
