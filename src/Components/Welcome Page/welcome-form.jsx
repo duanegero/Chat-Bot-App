@@ -1,21 +1,32 @@
 //imports from react
-import { useEffect, useState, useRef } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+//importing styles for button
 import welcomeButtonClass from "../buttonClasses";
+
+//importing icons from react
 import { IoIosBatteryFull } from "react-icons/io";
 import { FaWifi } from "react-icons/fa";
 import { FaSignal } from "react-icons/fa";
 
 export default function WelcomeForm() {
+  //state variable to handle dots on welcome screen
   const [filledDots, setFilledDots] = useState(0);
+
+  //variable to handle navigation
   const navigate = useNavigate();
 
+  //function to handle button click
   const handleButtonClick = () => {
+    //if dots less than 6
     if (filledDots < 6) {
+      //variable to handle next dot
       const newFilledDots = filledDots + 1;
+      //set varible to value of new dots
       setFilledDots(newFilledDots);
 
+      //if dots equal 6 navigate to chat window
       if (newFilledDots === 6) {
         setTimeout(() => {
           navigate("/chat");
@@ -26,48 +37,50 @@ export default function WelcomeForm() {
 
   return (
     <div className="flex flex-col justify-center items-center">
-      <h1 className="font-bold text-5xl tracking-widest mt-3 font-boldonse border-2 p-6 rounded-2xl bg-[#007aff] text-white">
+      <h1 className="font-bold text-2xl tracking-widest mt-3 font-boldonse border-2 p-6 rounded-2xl bg-[#007aff] text-white">
         Welcome
       </h1>
-      <div className="w-[375px] h-[667px] border-4 rounded-2xl p-5 mt-14 mb-10 flex flex-col items-center justify-center relative bg-[url('../images/Welcome_background.jpeg')] bg-cover bg-center">
+      <div className="w-[375px] h-[667px] border-4 rounded-4xl p-5 mt-14 mb-10 flex flex-col items-center justify-center relative bg-[url('../images/Welcome_background.jpeg')] bg-cover bg-center">
         <div className="mb-20">
-          <IoIosBatteryFull className="text-4xl absolute top-0 right-6 text-lime-400" />
-          <FaWifi className="text-2xl absolute top-1.5 right-17 text-gray-100" />
+          <IoIosBatteryFull className="text-4xl absolute top-0 right-6 text-[#34C759]" />
+          <FaWifi className="text-2xl absolute top-1.5 right-17 text-[#F2F2F7]" />
           <FaSignal className="text-2xl absolute top-1.5 right-25 text-gray-100" />
-          <p className="absolute top-2 left-4 text-gray-100">Telus</p>
+          <p className="absolute top-2 left-4 text-[#F2F2F7] font-inter tracking-wider">
+            Telus
+          </p>
 
-          <p className="text-center mb-6 tracking-wider text-gray-100">
+          <p className="text-center mb-6 tracking-wider text-[#F2F2F7] font-inter">
             Enter Passcode
           </p>
           <div className="flex flex-row justify-center items-center gap-5">
             <div
               className={`border rounded-full w-4 h-4 text-gray-100 ${
-                filledDots >= 1 ? "bg-gray-100" : ""
+                filledDots >= 1 ? "bg-[#F2F2F7]" : ""
               }`}
             ></div>
             <div
               className={`border rounded-full w-4 h-4 text-gray-100 ${
-                filledDots >= 2 ? "bg-gray-100" : ""
+                filledDots >= 2 ? "bg-[#F2F2F7]" : ""
               }`}
             ></div>
             <div
               className={`border rounded-full w-4 h-4 text-gray-100 ${
-                filledDots >= 3 ? "bg-gray-100" : ""
+                filledDots >= 3 ? "bg-[#F2F2F7]" : ""
               }`}
             ></div>
             <div
               className={`border rounded-full w-4 h-4 text-gray-100 ${
-                filledDots >= 4 ? "bg-gray-100" : ""
+                filledDots >= 4 ? "bg-[#F2F2F7]" : ""
               }`}
             ></div>
             <div
               className={`border rounded-full w-4 h-4 text-gray-100 ${
-                filledDots >= 5 ? "bg-gray-100" : ""
+                filledDots >= 5 ? "bg-[#F2F2F7]" : ""
               }`}
             ></div>
             <div
               className={`border rounded-full w-4 h-4 text-gray-100 ${
-                filledDots >= 6 ? "bg-gray-100" : ""
+                filledDots >= 6 ? "bg-[#F2F2F7]" : ""
               }`}
             ></div>
           </div>
@@ -111,9 +124,11 @@ export default function WelcomeForm() {
           </button>
         </div>
         <div className="flex justify-between">
-          <button className="absolute left-4 text-gray-100">Emergency</button>
+          <button className="absolute left-4 text-[#F2F2F7] font-inter tracking-wide">
+            Emergency
+          </button>
           <button
-            className="absolute right-4 text-gray-100"
+            className="absolute right-4 text-[#F2F2F7] font-inter tracking-wide"
             onClick={() => setFilledDots(0)}
           >
             Cancel

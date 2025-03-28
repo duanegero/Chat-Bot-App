@@ -13,7 +13,7 @@ export default function Chat() {
   useEffect(() => {
     document.title = "Chat";
 
-    document.body.classList.add("bg-black");
+    document.body.classList.add("bg-[#3C3C3C]");
     //variable to handle new socket
     const newSocket = io("http://localhost:3010", {
       transports: ["websocket"],
@@ -35,7 +35,7 @@ export default function Chat() {
 
     //clean up function to run on unmount
     return () => {
-      document.body.classList.remove("bg-black");
+      document.body.classList.remove("bg-[#3C3C3C]");
 
       //removes event listener
       newSocket.off("bot-reply");
