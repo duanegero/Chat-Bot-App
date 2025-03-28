@@ -35,6 +35,8 @@ export default function Chat() {
 
     //clean up function to run on unmount
     return () => {
+      document.body.classList.remove("bg-black");
+
       //removes event listener
       newSocket.off("bot-reply");
       //disconnects the server
