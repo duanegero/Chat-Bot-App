@@ -37,9 +37,6 @@ export default function WelcomeForm() {
 
   return (
     <div className="flex flex-col justify-center items-center">
-      <h1 className="font-bold text-2xl tracking-widest mt-3 font-boldonse border-2 p-6 rounded-2xl bg-[#007aff] text-white">
-        Welcome
-      </h1>
       <div className="w-[375px] h-[667px] border-4 rounded-4xl p-5 mt-14 mb-10 flex flex-col items-center justify-center relative bg-[url('../images/Welcome_background.jpeg')] bg-cover bg-center">
         <div className="mb-20">
           <IoIosBatteryFull className="text-4xl absolute top-0 right-6 text-[#34C759]" />
