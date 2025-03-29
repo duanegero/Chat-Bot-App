@@ -6,13 +6,13 @@ This is a web application built using React and Vite, providing users with an in
 - [Usage](#usage)
 - [Features](#features)
 - [Backend Repository](#backend)
-- [Websocket Repository](#websocket)
+- [WebSocket Repository](#WebSocket)
 
 ## Installation
 
 1. Clone Repository<br>
    `git clone https://github.com/duanegero/Chat-Bot-App.git`
-2. Navigate to the Project Directory
+2. Navigate to the Project Directory<br>
    `cd Chat-Bot-App`
 3. Install Dependencies:<br>
    `npm install`
@@ -21,7 +21,7 @@ This is a web application built using React and Vite, providing users with an in
 
 ## Usage
 
-One the app is running, install and start both the <strong>socket server</strong> and the <strong>RESTful API backend</strong>. The app will establish a WebSocket connection, allowing real-time communication between users and the chatbot. Users can send messages, receive instant responses, and perform CRUD operations through API requests.
+Once the app is running, install and start both the <strong>socket server</strong> and the <strong>RESTful API backend</strong>. The app will establish a WebSocket connection, allowing real-time communication between users and the chatbot. Users can send messages, receive instant responses, and perform CRUD operations through API requests.
 
 ## Features
 
@@ -36,7 +36,7 @@ One the app is running, install and start both the <strong>socket server</strong
 
 https://github.com/duanegero/Chat-Bot-API.git
 
-## Websocket
+## WebSocket
 
 ### Chat-Bot socket server
 
