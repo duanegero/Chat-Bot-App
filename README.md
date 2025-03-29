@@ -1,12 +1,43 @@
-# React + Vite
+# Chat-Bot React + Vite App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a web application built using React and Vite, providing users with an interactive interface to connect to a WebSocket server and send CRUD requests to a RESTful API.
 
-Currently, two official plugins are available:
+- [Installation](#installation)
+- [Usage](#usage)
+- [Features](#features)
+- [Backend Repository](#backend)
+- [Websocket Repository](#websocket)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Installation
 
-## Expanding the ESLint configuration
+1. Clone Repository<br>
+   `git clone https://github.com/duanegero/Chat-Bot-App.git`
+2. Navigate to the Project Directory
+   `cd Chat-Bot-App`
+3. Install Dependencies:<br>
+   `npm install`
+4. Start App<br>
+   `npm run dev`
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Usage
+
+One the app is running, install and start both the <strong>socket server</strong> and the <strong>RESTful API backend</strong>. The app will establish a WebSocket connection, allowing real-time communication between users and the chatbot. Users can send messages, receive instant responses, and perform CRUD operations through API requests.
+
+## Features
+
+- Real-time communication via WebSockets
+- RESTful API integration for data management
+- Fast and optimized performance with Vite
+- Interactive UI for seamless user experience
+
+## Backend
+
+### Chat-Bot RESTful API
+
+https://github.com/duanegero/Chat-Bot-API.git
+
+## Websocket
+
+### Chat-Bot socket server
+
+https://github.com/duanegero/Chat-Bot-Socket.git
